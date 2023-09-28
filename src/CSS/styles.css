@@ -1,0 +1,247 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: inherit;
+  }
+  
+  body {
+    background-color: var(--bg_body);
+    font-family: 'Nunito Sans', sans-serif;
+  }
+  
+  .container {
+    margin: 0px 4%;
+  }
+  
+  .header {
+    padding: 18.5px 0px;
+    background-color: var(--bg_default);
+    box-shadow: 0px 0px 20px -10px var(--body-text);
+    z-index: 10;
+    position: sticky;
+  }
+  
+  .nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .title {
+    font-size: 16px;
+    color: var(--brand-primary);
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .nav-buttons {
+    display: flex;
+    gap: 5px;
+  }
+  
+  .icon-button {
+    color: var(--body-text);
+    font-weight: 400;
+    font-size: 14.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--lines-color);
+    border-radius: 5px;
+    padding: 6px 9px;
+    background-color: var(--bg_default);
+    cursor: pointer;
+  }
+  
+  .icon-button:hover {
+    transition: backgroundall;
+    background-color: var(--body-text);
+    color: var(--lines-color);
+  }
+  
+  .nav-icon {
+    margin-right: 6px;
+  }
+  
+  
+  .welcome-section {
+    width: 100%;
+    height: 114px;
+    background-color: var(--bg_default);
+    position: relative;
+  
+  }
+  
+  
+  .triangles {
+  
+    height: 4.7vw;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .blue-triangle,
+  .green-triangle {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 90%;
+  }
+  
+  .blue-triangle {
+    background-image: linear-gradient(to right, var(--brand-primary), var(--brand-secondary));
+    clip-path: polygon(0% 0%, 100% 0%, 0% 100%);
+    left: 0;
+  }
+  
+  .green-triangle {
+    background-color: var(--brand-secondary);
+    clip-path: polygon(100% 0%, 0% 0%, 100% 100%);
+    right: 0;
+  }
+  
+  .welcome {
+    margin-top: -20px;
+    display: flex;
+    justify-content: center;
+    font-weight: 700;
+   
+  }
+  
+  .welcome-header {
+    color: var(--brand-secondary);
+    font-size: 21px;
+    margin-bottom: -3px;
+  }
+  
+  .brief-desc {
+    font-size: 15px;
+    color: var(--body-text);
+  }
+  
+  .copyright {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 200px;
+  }
+  
+  /* ion icon heart */
+  .red-heart {
+    font-size: 24px;
+    color: var(--heart-color);
+    fill: var(--heart-color);
+  }
+  
+  .rate-star {
+    margin: -2px;
+    color: var(--gold);
+    fill: var(--gold);
+  }
+  
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 0px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 5px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: #eee;
+    border-radius: 5px;
+  }
+  
+  ::-webkit-scrollbar-track:hover {
+    background-color: #ddd;
+  }
+  
+  @media (max-width: 768px) {
+  
+    .icon-button {
+      padding: 4px 8px;
+    }
+  
+    .icon-button .nav-button-text {
+      font-size: 0px;
+    }
+  
+    .icon-button .nav-icon {
+      margin: 0px;
+    }
+  
+    .triangles {
+      height: 25%;
+    }
+  
+    .welcome {
+      margin: 5px 15px;
+    }
+  
+    .brief-desc {
+      font-size: 14px;
+    }
+  }
+  
+  /* Media query for between 769px - 999px */
+  @media only screen and (min-width: 769px) and (max-width: 999px) {
+  
+    .icon-button {
+      padding: 7px 11px;
+    }
+  
+    .icon-button .nav-button-text {
+      font-size: 14px;
+    }
+  
+    .icon-button .nav-icon {
+      margin-right: 6px;
+    }
+  
+    .triangles {
+      height: 68px;
+    }
+  
+    .welcome {
+      margin-top: -20px;
+    }
+  
+    .brief-desc {
+      font-size: 15px;
+    }
+  }
+  
+  @media (min-width: 1000px) and (max-width: 1250px) {
+  
+    .icon-button {
+      padding: 7px 11px;
+    }
+  
+    .icon-button .nav-button-text {
+      font-size: 14px;
+    }
+  
+    .icon-button .nav-icon {
+      margin-right: 6px;
+    }
+  
+    .triangles {
+      height: 68px;
+    }
+  
+    .welcome {
+      margin-top: -20px;
+    }
+  
+    .brief-desc {
+      font-size: 15px;
+    }
+  }
