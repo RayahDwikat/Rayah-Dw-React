@@ -21,7 +21,4 @@ export function IconButton({ text, iconName, onClick }) {
         </StyledButton>
 
     );
-
-
-
 };

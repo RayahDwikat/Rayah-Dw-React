@@ -1,10 +1,10 @@
 const BACKEND_HOST = 'https://tap-web-1.herokuapp.com';
 
 
-export const loadTopics = (search) =>{
+export const loadTopics = (searchBy) =>{
  let params = new URLSearchParams();
- if(search){
-    params.set('phrase', search);
+ if(searchBy){
+    params.set('phrase', searchBy);
  }
   return fetch(`${BACKEND_HOST}/topics/list?` + params)
  .then(res => res.json());

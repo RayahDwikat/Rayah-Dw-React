@@ -1,16 +1,18 @@
-import { useState , useEffect} from "react";
-import {InputWithIcon} from "../components/InputWithIcon";     
+import { useState, useEffect } from "react";
 import { loadTopics } from "../shared/loadTopics";
-import { DropDown } from "../components/DropDown";
-import {Cards} from "../components/cards";
-export const Home = ({}) => {
+import { InputWithIcon } from '../components/InputWithIcon';
+import { DropDown } from '../components/DropDown';
+import { Link } from "react-router-dom";
+import { RatingStars } from "../components/RatingStars";
+import "../CSS/styles.css";
 
-  const [topics, setTopics] = useState(null);
+export const Home = ({ }) => {
+
+  const [topics, setTopics] = useState([]);
   const [viewTopics, setviewTopics] = useState(null);
-  console.log(viewTopics);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-
+  console.log(topics);
   const [search, setSearch] = useState('');
   const [sortBy, setSortBy] = useState('');
 
@@ -19,84 +21,98 @@ export const Home = ({}) => {
 
   useEffect(() => {
     setLoading(true);
-     setTopics(null);
-
+    setTopics([]);
 
     loadTopics(search)
       .then((data) => {
         setTopics(data);
+
       })
-       .catch((err)=>{
+
+      .catch((err) => {
         setError(err)
 
-       })
-      .finally(() =>{
+      })
+      .finally(() => {
         setLoading(false);
       });
 
   }, [search]);
 
-  
-useEffect(()=>{
-  if(topics){
-    let updatedTopics= [...topics];
-    let categories = new Set();
-    topics.forEach(topic=> categories.add(topic.category));
-    
-    setFilterOptions(updatedTopics); 
 
+  useEffect(() => {
+    if (topics) {
+      setviewTopics([...topics]);
+      let updatedTopics = [...topics];
+      let categories = new Set();
+      topics.forEach(topic => categories.add(topic.category));
 
-    if(sortBy){
-      updatedTopics.sort((a,b) =>{
-        switch(sortBy){
-          case 'AUTHOR':
-            return a['name']< b['name']? -1 : 1 ;
-            break;
-          case 'TOPIC':
-            return a['topic']< b['topic']? -1 : 1 ;
-
-            default:
-              throw 'Unknown sort by option ${sortBy}';
-        }
-        
-      })
+      setFilterOptions(updatedTopics);
     }
-    if(filterBy) {
-      updatedTopics = updatedTopics.filter(topic => topic.category === filterBy);
+  }, [topics]);
 
-    }
-    setviewTopics(updatedTopics);
+  //     if(sortBy){
+  //       updatedTopics.sort((a,b) =>{
+  //         switch(sortBy){
+  //           case 'AUTHOR':
+  //             return a['name']< b['name']? -1 : 1 ;
+  //             break;
+  //           case 'TOPIC':
+  //             return a['topic']< b['topic']? -1 : 1 ;
 
-  }
-}, [topics , sortBy, filterBy]);
+  //             default:
+  //               throw 'Unknown sort by option ${sortBy}';
+  //         }
+
+  //       })
+  //     }
+  //     if(filterBy) {
+  //       updatedTopics = updatedTopics.filter(topic => topic.category === filterBy);
+
+  //     }
+  //     setviewTopics(updatedTopics);
+
+  //   }
+  // }, [topics , sortBy, filterBy]);
 
   return <>
-    <InputWithIcon value={search} onChange={(event)=>{setSearch(event.target.value) }} />
+    <InputWithIcon value={search} onChange={(event) => { setSearch(event.target.value) }} />
     <DropDown value={sortBy}
-              options={[ 
-                {title: 'Author Name' , value : 'AUTHOR'}
-                ,{title: 'Topic Title' , value : 'TOPICS'}
+      options={[
+        { title: 'Author Name', value: 'AUTHOR' }
+        , { title: 'Topic Title', value: 'TOPICS' }
 
-              ]}
-              onChange={(event) =>{setSortBy(event.target.value) }}
-    
+      ]}
     />
-    <DropDown value={filterBy}
-              options={filterOptions.map(cat => ({title:cat , value:cat}))}
-              onChange={(event) =>{setFilterBy(event.target.value) }}
-    
-    />
-    
+
     <div>
-     {
-        viewTopics?.map((topic)=>(
-        <Cards key={topic.id} id={topic.id} name={topic.name} image={topic.image} category={topic.category} topic={topic.topic}/>
-       ))
-     }
-    </div>
-  </> 
+    <section class="courses container">
+      {viewTopics?.map((topic) => (
+        <Link to={`/details/${topic.id}`} className="course-card">
+          <img src={require(`../Assets/${topic.image}`)} alt="text" />
+          <div className="card-info">
+            <div className="card-description">
+              <h4 className="web-course">{topic.category}</h4>
+              <h4 className="course-name">{topic.topic}</h4>
+            </div>
+            <section className="card-footer">
+              <RatingStars rating={topic.rating} />
+              <div className="course-author">
+                <p>Author: {topic.name}</p>
+              </div>
+            </section>
+          </div>
+        </Link>
+      ))}
+            </section>
 
-}
+    </div>
+
+  </>
+
+
+
+};
 
 
 

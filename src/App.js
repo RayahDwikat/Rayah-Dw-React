@@ -1,13 +1,11 @@
-
 import './App.css';
-import './index.css';
 import { BrowserRouter, Routes , Route } from 'react-router-dom';
 import {Home} from './pages/Home';
 import { Details } from './pages/Details';
-import { MainLayout } from './Layouts/MainLayout';
+import {MainLayout} from './Layouts/MainLayout';
 
-function App() {
-  return (
+export function App() {
+  return ( <>
   <BrowserRouter>
     <Routes> 
     <Route path="/" element={<MainLayout />} >
@@ -17,7 +15,8 @@ function App() {
     </Routes>
     
   </BrowserRouter>
+  </>
   );
-}
+};
 
-export default App;
+

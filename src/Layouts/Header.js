@@ -1,50 +1,84 @@
-import styled from "styled-components";
+import "../CSS/styles.css";
 import { Link } from "react-router-dom";
-import { IconButton } from "../components/IconButton";
-import { MainContainer } from "./MainContainer";
-import '../CSS/styles.css'; 
-// const StyledHeader = styled.header`
-// background: var(--brand-primary);
+import { DarkModeButton } from "../components/DarkModeButton";
+   export const Header = () => {  
+    return (
+      <header className="header">
+        <nav className="nav-bar container">
+          <Link to="/" className="title">Web Topics</Link>
+          <div className="nav-buttons">
+            <DarkModeButton/>
+            <button className="icon-button">
+              <ion-icon className="nav-icon" name="heart-outline"></ion-icon>
+              <span className="nav-button-text">Favourites</span>
+            </button>
+          </div>
+        </nav>
+      </header>
+    );
+  };
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const styledNavBtnContainer = styled.div`
+// display:flex;
+// gap:10px;
 
 // `;
-// const StyledMainContainer =styled(MainContainer)`
+// const NavLink = styled(Link)`
+
+// `;
+// const StyledHeader = styled.header`
+// background: var(--brand-primary);
+// justify-content: space-betwwen;
+// display: flex;
+// box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+// align-items: center;
+// padding-block:;
+// `;
+
+// const StyledMainContainer = styled(MainContainer)`
 // display:flex;
 // justify-content:space-between;
 // width:100%;
-// `;
-export const Header = () => {
-   // return <>
-        {/* <StyledHeader>
-            <MainContainer>
-                <div>
-                    <a href="Home.js">Web Topics</a>
-                </div>
-                <div>
-                    <Button>Dark mode</Button>
-                    <Button>Favourites</Button>
-                </div>
-            </MainContainer>
+// `; 
 
-        </StyledHeader> */}
-       
-  return (
-    <header className="header">
-      <nav className="nav-bar container">
-        <a href="index.html" className="title">
-          Web Topics
-        </a>
-        <div className="nav-buttons">
-          <IconButton id="dark-mode" className="icon-button" text="dark mode" iconName="moon-outline">
-            <ion-icon id="moon" className="nav-icon" text="Dark mode" iconName="moon-outline"></ion-icon>
-            <span className="nav-button-text">Dark Mode</span>
-          </IconButton>
-          <IconButton className="icon-button" text="Favorite" iconName="heart-outline">
-            <ion-icon className="nav-icon" name="heart-outline"></ion-icon>
-            <span className="nav-button-text">Favourites</span>
-          </IconButton>
-        </div>
-      </nav>
-    </header>
-  );
-};
+
+
+
+    // <StyledHeader>
+    //   <StyledMainContainer>
+    //     <NavLink to='/home'> Web Topics</NavLink>
+    //     <styledNavBtnContainer>
+    //       <IconButton text="Dark Mode"
+    //                   iconName="moon-outline"
+    //                     />
+    //       <IconButton text="Favorite"
+    //                   iconName ="heart-outline"
+    //                     />
+          
+    //     </styledNavBtnContainer>
+    //   </StyledMainContainer>
+
+    // </StyledHeader>
+   
+
+
 

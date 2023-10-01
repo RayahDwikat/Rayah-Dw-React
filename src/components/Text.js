@@ -1,4 +1,9 @@
 export const Text = ({type, children}) =>{
-  return<>{children}</>
+  return(
+    <>
+  {children}
+  </>
  
+  )
+  
 }
