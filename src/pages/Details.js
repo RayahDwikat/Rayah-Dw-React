@@ -63,14 +63,14 @@ export const Details = () => {
         <main class="main ">
             <h2>{topic.topic} Sub Topics</h2>
             <ul>
-            {topic.subTopics &&
-              topic.subTopics.map((subTopics, index) => (
+            {topic.subtopics &&
+              topic.subtopics.map((subtopics, index) => (
                 <li key={index}>
                   <ion-icon
                     name="checkmark-circle-outline"
                     className="icon check"
                   ></ion-icon>
-                  <span className="details-main-desc">subTopics</span>
+                  <span className="details-main-desc">{subtopics}</span>
                 </li>
               ))}
             </ul>
