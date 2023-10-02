@@ -8,7 +8,7 @@ export function App() {
   return ( <>
   <BrowserRouter>
     <Routes> 
-    <Route path="/" element={<MainLayout />} >
+    <Route path="/Rayah-Dw-React" element={<MainLayout />} >
     <Route index element={<Home />} />
     <Route path="details/:id" element = {<Details />} />                  
     </Route>

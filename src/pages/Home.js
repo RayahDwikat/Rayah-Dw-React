@@ -86,7 +86,7 @@ export const Home = ({ }) => {
     <div>
     <section class="courses container">
       {viewTopics?.map((topic) => (
-        <Link to={`/details/${topic.id}`} className="course-card">
+        <Link to={`/Rayah-Dw-React/details/${topic.id}`} className="course-card">
           <img src={require(`../Assets/${topic.image}`)} alt="text" />
           <div className="card-info">
             <div className="card-description">
