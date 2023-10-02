@@ -1,7 +1,5 @@
 import { useState, useEffect } from "react";
 import { loadTopics } from "../shared/loadTopics";
-import { InputWithIcon } from '../components/InputWithIcon';
-import { DropDown } from '../components/DropDown';
 import { Link } from "react-router-dom";
 import { RatingStars } from "../components/RatingStars";
 import "../CSS/styles.css";
@@ -76,14 +74,14 @@ export const Home = ({ }) => {
   // }, [topics , sortBy, filterBy]);
 
   return <>
-    <InputWithIcon value={search} onChange={(event) => { setSearch(event.target.value) }} />
+    {/* <InputWithIcon value={search} onChange={(event) => { setSearch(event.target.value) }} />
     <DropDown value={sortBy}
       options={[
         { title: 'Author Name', value: 'AUTHOR' }
         , { title: 'Topic Title', value: 'TOPICS' }
 
       ]}
-    />
+    /> */}
 
     <div>
     <section class="courses container">

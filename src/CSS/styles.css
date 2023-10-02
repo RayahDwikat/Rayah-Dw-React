@@ -500,7 +500,6 @@
 }
 
 
-/* Customizing the fav-cards-bar scrollbar*/
 .favourite-cards-container::-webkit-scrollbar {
     width: 10px;
     height: 0px;
@@ -563,14 +562,12 @@
     margin-bottom: -4px;
     margin-inline: -2px;
 }
-/* details page */
 .details-container {
   width: 62%;
   margin: 0 auto;
   padding-inline-end: 355px;
 }
 
-/* details-page-title */
 .details-title {
   font-size: 24px;
   font-weight: 700;
@@ -714,16 +711,12 @@
 
 
 .details-main-desc {
-  /* white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis; */
   max-width: 80%;
 }
 
 .check {
   color: var(--brand-secondary);
   font-size: 24px;
-  /* margin-right: 16px; */
 }
 
 .details-footer {
@@ -744,7 +737,6 @@
 
 
 
-/* Media query  */
 @media (min-width: 431px) and (max-width: 950px) {
   .details-container {
       width: 70%;
@@ -766,7 +758,6 @@
 
 }
 
-/* Media query  */
 @media (min-width:354px) and (max-width:430px) {
   .details-container {
       width: 90%;
