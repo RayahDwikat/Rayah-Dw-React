@@ -9,7 +9,7 @@ export function App() {
   <BrowserRouter>
     <Routes> 
     <Route path="/Rayah-Dw-React" element={<MainLayout />} >
-    <Route index element={<Home />} />
+    <Route index element={<Home/>}/>
     <Route path="details/:id" element = {<Details />} />                  
     </Route>
     </Routes>
