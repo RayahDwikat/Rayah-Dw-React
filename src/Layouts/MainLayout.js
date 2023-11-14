@@ -5,6 +5,7 @@ import { WelcomeSection } from "./WelcomeSection";
 import { Footer } from "./Footer";
 import { InputWithIcon } from "../components/InputWithIcon";
 
+
 export function MainLayout({ children }) {
     return (
         <>
@@ -12,9 +13,6 @@ export function MainLayout({ children }) {
             <Header />
             <WelcomeSection />
             <InputWithIcon/>
-
-         
-         
             <main>
                 <Outlet />
             </main>
