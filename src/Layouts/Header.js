@@ -5,7 +5,7 @@ import { DarkModeButton } from "../components/DarkModeButton";
     return (
       <header className="header">
         <nav className="nav-bar container">
-          <Link to="/" className="title">Web Topics</Link>
+          <Link to="/Rayah-Dw-React" className="title">Web Topics</Link>
           <div className="nav-buttons">
             <DarkModeButton/>
             <button className="icon-button">

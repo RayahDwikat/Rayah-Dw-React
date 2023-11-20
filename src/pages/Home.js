@@ -38,7 +38,6 @@ export const Home = () => {
       let categories = new Set();
       topics.forEach(topic => categories.add(topic.category));
       setFilterOptions([...categories]);
-      console.log(filterOptions , "hey 555555555522222222222222222");
       let updatedTopics= [...topics];
 
        if(sortBy){

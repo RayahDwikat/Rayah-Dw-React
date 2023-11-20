@@ -303,6 +303,7 @@
   .options label {
     font-size: 12px;
     padding-left: 4px;
+    
   }
   
   .options select {
@@ -311,6 +312,7 @@
     border: none;
     outline: none;
     font-size: 15px;
+    width: 95%;
   }
   
   .options select:active {
