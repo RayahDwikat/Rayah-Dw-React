@@ -12,7 +12,6 @@ export function MainLayout({ children }) {
 
             <Header />
             <WelcomeSection />
-            <InputWithIcon/>
             <main>
                 <Outlet />
             </main>
