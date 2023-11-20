@@ -85,7 +85,7 @@ export const Home = () => {
         label="Sort By:"
         value={sortBy}
         options={[
-          { title: "default" , value:''    },
+          { title: "Default" , value:'' },
           { title: "Author Name", value: "AUTHOR" },
           { title: "Topic Title", value: "TOPIC" },
         ]}
