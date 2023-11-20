@@ -91,7 +91,7 @@
   }
   
   .blue-triangle {
-    background-image: linear-gradient(to right, var(--brand-primary), var(--brand-secondary));
+    background-image: linear-gradient( var(--brand-primary), var(--brand-secondary));
     clip-path: polygon(0% 0%, 100% 0%, 0% 100%);
     left: 0;
   }
@@ -107,6 +107,7 @@
     display: flex;
     justify-content: center;
     font-weight: 700;
+    align-items: center;
    
   }
   
@@ -114,6 +115,9 @@
     color: var(--brand-secondary);
     font-size: 21px;
     margin-bottom: -3px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15%;
   }
   
   .brief-desc {
