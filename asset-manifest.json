@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Rayah-Dw-React/static/css/main.2f44501f.css",
+    "main.css": "/Rayah-Dw-React/static/css/main.7b33c2c6.css",
     "main.js": "/Rayah-Dw-React/static/js/main.85117c4c.js",
     "static/js/787.7345901b.chunk.js": "/Rayah-Dw-React/static/js/787.7345901b.chunk.js",
     "static/media/analytics.png": "/Rayah-Dw-React/static/media/analytics.7e81c6ec23532162f2ea.png",
@@ -44,12 +44,12 @@
     "static/media/moon-outline.svg": "/Rayah-Dw-React/static/media/moon-outline.2129577db9c00aaa71d7.svg",
     "static/media/star.svg": "/Rayah-Dw-React/static/media/star.a5ce1522914f154825b2.svg",
     "static/media/star-outline.svg": "/Rayah-Dw-React/static/media/star-outline.3fddae62d5caa89177fd.svg",
-    "main.2f44501f.css.map": "/Rayah-Dw-React/static/css/main.2f44501f.css.map",
+    "main.7b33c2c6.css.map": "/Rayah-Dw-React/static/css/main.7b33c2c6.css.map",
     "main.85117c4c.js.map": "/Rayah-Dw-React/static/js/main.85117c4c.js.map",
     "787.7345901b.chunk.js.map": "/Rayah-Dw-React/static/js/787.7345901b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2f44501f.css",
+    "static/css/main.7b33c2c6.css",
     "static/js/main.85117c4c.js"
   ]
 }
